@@ -305,10 +305,15 @@
         </div>
     </div>
 </section>
-<div class="res">
-    <h2>Спасибо!</h2>
+<div class="quiz-answer">
+  <h2>Спасибо за Ваши ответы!</h2>
+  <div class="quiz-answer__block">
+  <p>
+    Вы получили скидку 10% <br>
+  </p>
+  <button class="button quiz-buttons__button_next quiz-buttons__button">Сделайте заказ</button>
 </div>
-
+</div>
 <div class="quiz__buttons">
     <div class="quiz-buttons">
         <div class="progress-bar progress-bar_mobile">
@@ -339,6 +344,7 @@
         </button>
     </div>
 </div>
+
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -366,7 +372,7 @@
             if (page > count) {
                 answer[3] = $(".quiz4 input[type='radio']:checked").val();
                 $('.quiz_section, .quiz__buttons').hide();
-                $('.res').show();
+                $('.quiz-answer').show();
 
                 $.ajax({
                     type: "POST",
