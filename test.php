@@ -561,20 +561,7 @@
                 answer['tel'] = $(".quiz7 input[type='tel']").val();
 
                 $('.quiz_section, .quiz__buttons').hide();
-                if (answer !== null) {
-                    $.ajax({
-                        type: "POST",
-                        url: "mail.php",
-                        data: {array: answer},
-                        dataType: "json",
-                        success: function (data) {
-                            console.log('success');
-                        },
-                        error: function (data) {
-                            console.log('error');
-                        }
-                    });
-                }
+                sendData();
             }
         });
         $('.quiz-buttons__button_prev').click(function () {
@@ -605,6 +592,21 @@
 
         function disabledNextBtn() {
             $('.quiz-buttons__button_next').prop('disabled', true);
+        }
+
+        function sendData() {
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: {array: answer},
+                dataType: "json",
+                success: function (data) {
+                    console.log('success');
+                },
+                error: function (data) {
+                    console.log('error');
+                }
+            });
         }
     });
 </script>
