@@ -107,9 +107,24 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 ul {
-    list-style: none
+    list-style: none;
 }
 
+.quiz_input-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.quiz_input{
+    width: 48%;
+    height: 52px;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid rgba(217,216,230,.55);
+    border-radius: 5px;
+    color: #000 !important;
+}
 button,input,select,textarea {
     margin: 0
 }
@@ -266,7 +281,9 @@ border-radius: 5px;
 padding: 15px;
 max-width: 80%;
 margin: auto;
-display: none;
+}
+.quiz8{
+    display: none;
 }
 .quiz-answer h2{
   text-align: center;
